@@ -1,0 +1,169 @@
+// MAIN CONTENT
+
+// IMPORTS
+
+@import "variables";
+
+@import "mixins";
+
+.main-content {
+  grid-area: main;
+  background: $dark-grey;
+
+  .main-content__subtitle {
+    @include font($font-family, 2em, 1em, 500, normal, 0em, $white);
+    padding-top: 40px;
+    margin-bottom: 18px;
+  }
+
+  .filters-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $light-grey;
+
+    .radio-group__button {
+      position: relative;
+      margin: 0 35px 18px 0;
+
+      .radio-group__input {
+        opacity: 0;
+      }
+
+      .radio-group__label {
+        @include font($font-family, 1em, 1em, 400, normal, 0em, $light-grey);
+      }
+
+      .radio-group__label::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        bottom: 4px;
+        width: 14px;
+        height: 14px;
+        background: transparent;
+        border: 1px solid $light-grey;
+      }
+
+      .radio-group__input:checked + .radio-group__label::before {
+        background: $red url("../images/check.svg") no-repeat center;
+        opacity: 98%;
+        border: 1px solid $red;
+      }
+    }
+
+    .search-group {
+      position: relative;
+      margin-left: auto;
+
+      .fa-search {
+        position: absolute;
+        top: 50%;
+        left: 3%;
+        color: $dark-grey;
+        transform: translate(0, -100%);
+      }
+
+      .search-field {
+        width: 250px;
+        padding-left: 25px;
+        color: $dark-grey;
+      }
+    }
+
+  }
+
+  .movies-list {
+
+    .movies-list__item {
+      margin-bottom: 16px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      .movie-card {
+        display: flex;
+        background: $grey;
+
+        .card__poster {
+          display: flex;
+          width: 168px;
+          height: auto;
+          background: $light-grey;
+
+          .card__img {
+            display: flex;
+            margin: auto;
+            width: 112px;
+            height: auto;
+          }
+        }
+
+        .card__description {
+          width: 1230px;
+          padding: 32px 24px;
+
+          .card__description__title {
+            margin-bottom: 12px;
+            @include font($font-family, 2.25em, 1em, 700, normal, 0em, $white);
+            text-transform: none;
+          }
+
+          .card__description__year-genres,
+          .card__description__director,
+          .card__description__actors {
+            @include font($font-family, 0.75em, 1em, 700, normal, 0em, #988F8F);
+            text-transform: uppercase;
+          }
+
+          .card__description__year-genres,
+          .card__description__director {
+            margin-bottom: 8px;
+          }
+
+          .card__description__actors {
+            margin-bottom: 14px;
+          }
+
+          .card__description__actors span {
+            @include font($font-family, 1em, 1.3em, 400, normal, 0em, $white);
+            text-transform: none;
+          }
+
+          .card__description__movie-description {
+            @include font($font-family, 1em, 1.25em, 400, normal, 0em, $white);
+          }
+        }
+      }
+
+
+    }
+  }
+
+
+}
+
+// @MEDIA
+
+// Tablet portrait
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .main-content {
+
+    .main-content__content {
+      width: 55%;
+    }
+  }
+}
+
+// Mobile landscape
+
+@media screen and (min-width: 568px) and (max-width: 767px) {
+
+}
+
+// Mobile portrait
+
+@media screen and (min-width: 375px) and (max-width: 567px) {
+
+}
+

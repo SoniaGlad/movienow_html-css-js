@@ -1,0 +1,15 @@
+// FOOTER
+
+// IMPORTS
+
+@import "variables";
+
+@import "mixins";
+
+.footer {
+  grid-area: footer;
+  padding: 15px;
+  @include font($font-family, .8em, 1.5em, 400, normal, .10em, $light-grey);
+  text-align: center;
+  background: $black;
+}

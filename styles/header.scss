@@ -1,0 +1,45 @@
+// HEADER
+
+// IMPORTS
+
+@import "variables";
+
+@import "mixins";
+
+.header {
+  grid-area: header;
+  text-align: center;
+  background: $red;
+  box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.28);
+
+  .header__title {
+    padding: 36px 0 16px;
+    @include font($font-family, 3em, 1em, 700, normal, .21em, $black);
+    text-transform: uppercase;
+  }
+}
+
+// @MEDIA
+
+// Mobile landscape
+
+@media screen and (min-width: 568px) and (max-width: 767px) {
+  .header {
+
+    .header__title {
+      font-size: 3em;
+    }
+  }
+}
+
+// Mobile portrait
+
+@media screen and (min-width: 375px) and (max-width: 567px) {
+
+  .header {
+
+    .header__title {
+      font-size: 3em;
+    }
+  }
+}

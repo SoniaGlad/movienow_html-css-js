@@ -1,0 +1,14 @@
+.footer {
+  grid-area: footer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: gray;
+  text-align: center;
+  background: #181818;
+}
+
+/*# sourceMappingURL=footer.css.map */

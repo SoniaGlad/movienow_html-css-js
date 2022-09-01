@@ -1,0 +1,241 @@
+.header {
+  grid-area: header;
+  text-align: center;
+  background: #FA2828;
+  box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.28);
+}
+.header .header__title {
+  padding: 36px 0 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.21em;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 568px) and (max-width: 767px) {
+  .header .header__title {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 567px) {
+  .header .header__title {
+    font-size: 3em;
+  }
+}
+.main-content {
+  grid-area: main;
+  background: #363232;
+}
+.main-content .main-content__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: #ffffff;
+  padding-top: 40px;
+  margin-bottom: 18px;
+}
+.main-content .filters-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #C4C4C4;
+}
+.main-content .filters-group .radio-group__button {
+  position: relative;
+  margin: 0 35px 18px 0;
+}
+.main-content .filters-group .radio-group__button .radio-group__input {
+  opacity: 0;
+}
+.main-content .filters-group .radio-group__button .radio-group__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: #C4C4C4;
+}
+.main-content .filters-group .radio-group__button .radio-group__label::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 1px solid #C4C4C4;
+}
+.main-content .filters-group .radio-group__button .radio-group__input:checked + .radio-group__label::before {
+  background: #FA2828 url("../images/check.svg") no-repeat center;
+  opacity: 98%;
+  border: 1px solid #FA2828;
+}
+.main-content .filters-group .search-group {
+  position: relative;
+  margin-left: auto;
+}
+.main-content .filters-group .search-group .fa-search {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  color: #363232;
+  transform: translate(0, -100%);
+}
+.main-content .filters-group .search-group .search-field {
+  width: 250px;
+  padding-left: 25px;
+  color: #363232;
+}
+.main-content .movies-list .movies-list__item {
+  margin-bottom: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-content .movies-list .movies-list__item .movie-card {
+  display: flex;
+  background: #4D4747;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__poster {
+  display: flex;
+  width: 168px;
+  height: auto;
+  background: #C4C4C4;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__poster .card__img {
+  display: flex;
+  margin: auto;
+  width: 112px;
+  height: auto;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__description {
+  width: 1230px;
+  padding: 32px 24px;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__title {
+  margin-bottom: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.25em;
+  line-height: 1em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: #ffffff;
+  text-transform: none;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__year-genres,
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__director,
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__actors {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75em;
+  line-height: 1em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: #988F8F;
+  text-transform: uppercase;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__year-genres,
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__director {
+  margin-bottom: 8px;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__actors {
+  margin-bottom: 14px;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__actors span {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.3em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: #ffffff;
+  text-transform: none;
+}
+.main-content .movies-list .movies-list__item .movie-card .card__description .card__description__movie-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.25em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-content .main-content__content {
+    width: 55%;
+  }
+}
+.footer {
+  grid-area: footer;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: #C4C4C4;
+  text-align: center;
+  background: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: auto minmax(375px, 1400px) auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+}
+.page a, .page input {
+  text-decoration: none;
+}
+.page a:visited, .page a:focus, .page input:visited, .page input:focus {
+  outline: none;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    padding: 45px;
+  }
+}
+@media screen and (min-width: 568px) and (max-width: 767px) {
+  .wrapper {
+    padding: 35px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 567px) {
+  .wrapper {
+    padding: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
